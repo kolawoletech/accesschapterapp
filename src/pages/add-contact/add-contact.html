@@ -1,0 +1,58 @@
+<!--
+  Generated template for the AddContactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Contact</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="jr_login_bg">
+  <div class="jr_profile_content">
+    <div class="jr_login_wrapper">
+
+      <div class="jr_login_detail">
+        <h5>Are you ready</h5>
+        <h4>to </h4>
+        <p>add <br> your contacts?</p>
+        <hr>
+
+        <form [formGroup]="createContactForm" (submit)="createContact()" novalidate>
+          <ion-item>
+            <ion-label stacked>Name</ion-label>
+            <ion-input formControlName="contactName" type="text" placeholder="What's your contact name?"
+              [class.invalid]="!createContactForm.controls.contactName.valid &&
+                         createContactForm.controls.contactName.touched">
+            </ion-input>
+          </ion-item>
+          <ion-item class="error-message" *ngIf="!createContactForm.controls.contactName.valid  &&
+                      createContactForm.controls.contactName.touched">
+            <p>Give Your Contact a Name?</p>
+          </ion-item>
+
+         
+          <ion-item>
+            <ion-label stacked>Number</ion-label>
+            <ion-input formControlName="phoneNumber" type="number" placeholder=" Eg . 0620294056" [class.invalid]="!createContactForm.controls.phoneNumber.valid &&
+                          createContactForm.controls.phoneNumber.touched">
+            </ion-input>
+          </ion-item>
+          <ion-item class="error-message" *ngIf="!createContactForm.controls.phoneNumber.valid  &&
+                        createContactForm.controls.phoneNumber.touched">
+            <p>Enter Number Without the "+" </p>
+          </ion-item>
+          <button ion-button block type="submit" color="primary-dark" [disabled]="!createContactForm.valid">
+            Add Emergency Contact
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

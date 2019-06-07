@@ -1,0 +1,49 @@
+<!--
+  Generated template for the CreateBookingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CreateBooking</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ul *ngFor="let parent of category | filterCategory:0">
+        <h3>{{parent.name}}</h3>
+        <li *ngFor="let subcat of category | filterCategory:parent.id">
+          {{subcat.name}}
+        </li>
+      </ul>
+  <ion-list>
+    <ion-item>
+      <ion-label>Service</ion-label>
+      <ion-select [(ngModel)]="service">
+        <ion-option value="nes">Plumbing</ion-option>
+        <ion-option value="n64">Heating</ion-option>
+        
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="service">
+        <ion-option value="nes">Plumbing</ion-option>
+        <ion-option value="n64">Heating</ion-option>
+        
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Job</ion-label>
+      <ion-select [(ngModel)]="service">
+        <ion-option value="nes">Plumbing</ion-option>
+        <ion-option value="n64">Heating</ion-option>
+        
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
