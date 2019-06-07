@@ -38,9 +38,10 @@
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "node-sass": "^4.12.0",
-    "rxjs": "6.0.0",
+    "rxjs": "6.2.2",
     "rxjs-compat": "6.2.2",
     "sw-toolbox": "3.6.0",
+    "twilio": "^3.31.1",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
