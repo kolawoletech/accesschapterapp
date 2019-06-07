@@ -14,8 +14,11 @@
 
 
 <ion-content padding>
-    <button fill="clear" ion-item large (click)="sendAlert()">
-        <ion-icon name="alert"r></ion-icon>
-        Panic
-      </button>
+  <div class="alertContainer">
+      <button fill="clear" ion-item large (click)="presentToast()">
+          <ion-icon name="alert"r></ion-icon>
+        </button>
+  </div>
+  
+ 
 </ion-content>

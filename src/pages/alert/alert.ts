@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
+
 /* import { Twilio } from 'twilio';
 
 const client = new Twilio("MY_ACCOUNT_SID", "MY_AUTH_TOKEN");
@@ -21,7 +23,10 @@ client.messages.each({ limit: 10 }, function(message) {
 })
 export class AlertPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -43,7 +48,21 @@ export class AlertPage {
     }); */
 
 
-    
+
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'Alert Was Sent To Contacts',
+      duration: 3000,
+      position: 'top'
+    });
+  
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+  
+    toast.present();
   }
 
 }

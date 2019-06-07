@@ -18,6 +18,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { firebaseConfig } from './credentials';
 import { ContactProvider } from '../providers/contact/contact';
+import { WordpressProvider } from '../providers/wordpress/wordpress';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ContactProvider } from '../providers/contact/contact';
     MapProvider,
     SpinnerProvider,
     AuthProvider,
-    ContactProvider 
+    ContactProvider,
+    WordpressProvider 
   ]
 })
 export class AppModule {}

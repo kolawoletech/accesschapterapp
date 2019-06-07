@@ -1,5 +1,15 @@
 page-alert {
     ion-icon{
-        font-size: 80px; 
+        font-size: 160px; 
+        display: block;
+
+        
+    }
+    .alertContainer{
+        left: 56px;
+        background-color: #0074D9;
+        margin-left: 25%;
+        height: 100px;
+        display: inline-block;
     }
 }
